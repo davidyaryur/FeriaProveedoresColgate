@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cargando experiencia...</title>
+    
+    <style>
+        /* Estilos generales */
+        body {
+            margin: 0;
+            padding: 0;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            /* Color de fondo solicitado: R36 G36 B36 */
+            background-color: rgb(36, 36, 36); 
+            color: #ffffff;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            text-align: center;
+        }
+
+        /* Contenedor del video */
+        #intro-video {
+            width: 80%;
+            max-width: 200px;
+            border-radius: 12px;
+            margin-bottom: 25px;
+            /* box-shadow: 0 4px 15px rgba(0,0,0,0.3); Sombra suave para que resalte del fondo */
+        }
+
+        /* Estilos de Texto */
+        .linea-1 {
+            font-size: 22px;
+            font-weight: bold;
+            margin: 0 0 5px 0;
+            letter-spacing: 0.5px;
+        }
+
+        .linea-2 {
+            font-size: 16px;
+            font-weight: normal;
+            color: #d1d1d1; /* Un gris muy claro para diferenciarlo del título */
+            margin: 0 0 25px 0;
+        }
+
+        .linea-3 {
+            font-size: 13px;
+            font-style: italic;
+            opacity: 0.7;
+            animation: parpadeo 1.5s infinite; /* Efecto visual de carga */
+        }
+
+        /* Animación simple para el texto de cargando */
+        @keyframes parpadeo {
+            0% { opacity: 0.3; }
+            50% { opacity: 1; }
+            100% { opacity: 0.3; }
+        }
+    </style>
+</head>
+<body>
+
+    <video id="intro-video" autoplay muted playsinline loop>
+        <source src="https://video.wixstatic.com/video/427cb9_f62a44e23b62450a9f06f21857782b12/144p/mp4/file.mp4" type="video/mp4">
+    </video>
+
+    <div class="linea-1">Creado por Ing. David Rodríguez</div>
+    <div class="linea-2">Departamento de Diseño Inv. Yar-Yur</div>
+    <div class="linea-3">Redirigiendo a la experiencia AR...</div>
+
+    <script type="text/javascript">
+        // CONFIGURACIÓN
+        const urlDestino = "https://mywebar.com/p/Yar-YurSpeedStick";
+        const tiempoEspera = 4000; // 4 segundos
+
+        // Redirección
+        setTimeout(function() {
+            window.location.href = urlDestino;
+        }, tiempoEspera);
+    </script>
+
+</body>
+</html>
